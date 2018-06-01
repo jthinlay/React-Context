@@ -15,16 +15,15 @@ class App extends Component{
     this.state={
       text: "",
       contextState:{
-              count: 0,
-              increment: this.increment
-            }
+        count: 0,
+        increment: this.increment
+      }
     }
   }
     increment=()=>{
       this.setState({contextState: {...this.state.contextState, count: this.state.contextState.count + 1 }})
     }
 
-    // don't understand value name [name]:value
     onChange = e => {
       const {value, name} = e.target;
       this.setState({[name]: value })}
